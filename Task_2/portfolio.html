@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="WhatsApp Image 2025-01-18 at 10.30.46 AM.jpeg" alt="Profile" class="profile-img">
+            </div>
+            <h1 class="title">Jagpreet Singh</h1>
+            <p style="font-size: 1.5rem;">I am  highly dedicated , result-driven developer</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                
+            </div>
+            <div class="skill-card">
+                <h3>React.js</h3>
+                
+            </div>
+            <div class="skill-card">
+                <h3>C++</h3>
+                
+            </div>
+            <div class="skill-card">
+                  <h3>Node.js</h3>
+            </div>
+            <div class="skill-card">
+                 <h3>Express.js</h3>
+            </div>
+            <div class="skill-card">
+                <h3>MySql</h3>
+           </div>
+           <div class="skill-card">
+            <h3>Mongo Db</h3>
+       </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Project</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card" style="background: linear-gradient(45deg, #4f46e5, #7c3aed);">
+              
+                <div class="project-content">
+                    <h3>Subscription Management</h3>
+                    
+                </div>
+            </div>
+            <div class="project-card" style="background: linear-gradient(45deg, #7c3aed, #2dd4bf);">
+                <div class="project-content">
+                    <h3>Education App</h3>
+                    
+                </div>
+            </div>
+            <div class="project-card" style="background: linear-gradient(45deg, #2dd4bf, #4f46e5);">
+                <div class="project-content">
+                    <h3>Airline Service Management</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h1>Contact</h1>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>jagpreet1615@example.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/jagpreet</p>
+            </div>
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <p>github.com/jagpreetrahi</p>
+            </div>
+          
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+            follower.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`;
+        });
+
+        document.querySelectorAll('a, button, .project-card, .skill-card, .contact-item').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.querySelector('.cursor').style.transform = 'scale(2)';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                document.querySelector('.cursor').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
