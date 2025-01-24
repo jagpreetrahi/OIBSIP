@@ -7,7 +7,7 @@ function tempConvert(){
      let result;
 
     if(isNaN(inputNumber)){
-        document.getElementById("result").innerHTML = "Please enter the valid input"
+        alert("Please enter the valid number")
     }
 
     if(convertFrom === convertTo){
@@ -61,6 +61,6 @@ function tempConvert(){
     }
 
     document.getElementById("result").innerHTML = `${inputNumber} ${convertFrom.charAt(0).toUpperCase() + convertFrom.slice(1)}
-    = ${result.toFixed(2)} ${convertTo.charAt(0).toUpperCase() + convertTo.slice(1)}`
+    = ${result} ${convertTo.charAt(0).toUpperCase() + convertTo.slice(1)}`
 
 }
