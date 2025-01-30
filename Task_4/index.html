@@ -10,15 +10,24 @@
    
 </head>
 <body>
+    <h3 >👀 "Are You Smarter Than This Calculator?"</h3> <br>
     <div id="container">
-        <div id="result">
-
+        <div id="result"></div>
+        <div id="his" >
+            <button onclick="calculate()" id="history"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="12 8 12 12 16 14"></polyline>
+                    <path d="M3 12a9 9 0 1 0 9-9"></path>
+                    <polyline points="3 8 3 12 7 12"></polyline>
+                  </svg>
+            </button>
         </div>
+          
+        
         <div id="buttons">
             <div class="inside-btn">
                 <button class="lg-btn" onclick="calculate()">(</button>
                 <button class="lg-btn" onclick="calculate()">)</button>
-                <button class="lg-btn" onclick="calculate()">ans</button>
+                <button class="lg-btn" onclick="calculate()" id="ans">ans</button>
                 <button class="lg-btn" onclick="calculate()" id="del">del</button>
                 <button class="lg-btn" onclick="calculate()" id="clear">clear</button>
             </div>
@@ -27,7 +36,7 @@
                 <button class="btn" onclick="calculate()">8</button>
                 <button class="btn" onclick="calculate()">9</button>
                 <button class="btn" onclick="calculate()" style="background-color: #50B8E9;">%</button>
-                <button class="btn" onclick="calculate()" style="background-color: #50B8E9;"><i class="fa-solid fa-square-root"></i></button>
+                <button class="btn" onclick="calculate()" style="background-color: #50B8E9;">√</button>
             </div>
             <div class="inside-btn">
                 <button class="btn" onclick="calculate()">4</button>
@@ -46,8 +55,8 @@
             <div class="inside-btn">
                 <button class="btn" onclick="calculate()">.</button>
                 <button class="btn" onclick="calculate()">0</button>
-                <button class="btn" onclick="calculate()"></button>
-                <button class="btn" onclick="calculate()" style="background-color: #87CEEB; color: white;" id="enter">Enter</button>
+                <button class="btn" onclick="calculate()">±</button>
+                <button class="btn" onclick="calculate()" style="background-color: #87CEEB; color: white; padding: 10px 30px;" id="enter" >Enter</button>
             </div>
         </div>
 

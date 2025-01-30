@@ -2,29 +2,61 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    background: linear-gradient(360deg,rgb(9, 99, 155), #a3c8e2);
+    height : 100vh;
 }
 
-#container{
-    margin-left: 200px;
-    margin-top: 30px;
-    width:  350px;
-    max-width: 500px;
-    height: 460px;
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: white;
+@keyframes crazyText {
+    0% { color: red; transform: scale(1); }
+    25% { color: blue; transform: scale(1.1); }
+    50% { color: green; transform: scale(1); }
+    75% { color: purple; transform: scale(1.1); }
+    100% { color: orange; transform: scale(1); }
 }
+
+h3{
+    position: absolute; 
+    margin-left:  520px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation : crazyText 0.9s infinite;
+    transition: all 0.1s ease-in-out;
+    font-weight : bold;
+}
+
+
+#container{
+    margin-left: 500px;
+    margin-top: 100px;
+    width:  450px;
+    max-width: 500px;
+    height: 530px;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+
+}
+
+
+  
 #result{
-    width: 280px;
-    height: 50px;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
+    width: 350px;
+    height: 90px;
+    border: 1px solid gray;
     border-radius: 8px;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-right: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 5px;
-    font-size : 20px;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    position: relative; 
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #buttons{
@@ -33,12 +65,15 @@ body{
     
 }
 
+
+
 .inside-btn{
     display: flex;
     justify-content: space-around;
     margin-right : 15px;
     padding: 15px;
 }
+
 
 .btn{
     padding: 10px 15px;
@@ -49,6 +84,12 @@ body{
     cursor: pointer;
     background-color: #89F0DD;
     margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #6ad7be; 
+    transform: scale(1.1); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .lg-btn{
@@ -64,4 +105,28 @@ body{
     margin-right: 10px;
     
 }
+
+.lg-btn:hover {
+    background-color: #5ba8d1; 
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#his {
+    position: absolute;
+    left: 100px;
+    top : 110px;
+    margin-left : 15px;
+}
+
+#history {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left : 400px;
+    
+}
+
+
+
 
