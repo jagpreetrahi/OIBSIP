@@ -1,6 +1,7 @@
 function editTodo(element) {
     
     const parent = element.parentElement;
+    
     const title = parent.querySelector('h3');
     const description = parent.querySelector('h4');
     
@@ -72,17 +73,57 @@ function deleteTodo(element){
 }
 
 
+
+function completedtask() {
+    const small_child = document.getElementById("small");
+    const checkbox = small_child.children[0]; 
+    const completedTasksContainer = document.getElementById("completed-tasks");
+
+    if (checkbox.checked) {
+        
+        const final_div = document.createElement("div");
+        final_div.style.width = "500px";
+        final_div.style.marginTop = "20px";
+        final_div.style.padding = "20px";
+        final_div.style.border = "1px solid black";
+        
+
+        
+        final_div.appendChild(small_child.cloneNode(true)); 
+        completedTasksContainer.appendChild(final_div); 
+        small_child.remove(); 
+    }
+}
+
+function pendingTask() {
+    const small_child = document.getElementById("small");
+    const checkbox = small_child.children[0]; 
+    const pendingTasksContainer = document.getElementById("pending-tasks");
+
+    if (!checkbox.checked) {
+        
+        const final_div = document.createElement("div");
+        final_div.style.width = "500px";
+        final_div.style.marginTop = "20px";
+        final_div.style.padding = "20px";
+        final_div.style.border = "1px solid black";
+        final_div.appendChild(small_child.cloneNode(true)); 
+        pendingTasksContainer.appendChild(final_div); 
+        small_child.remove(); 
+    }
+}
+
+
 function createdTodo(){
    
     
     const title = document.getElementById("title").value;
     const description = document.getElementById("description").value;
-
     const result_todo = document.getElementById("result-todo");
     const child  = document.createElement("div");
+    child.setAttribute('id' , 'small');
     const checkbox = document.createElement("input")
     checkbox.type  = "checkbox";
-
     const firstChild = document.createElement("h3");
     firstChild.innerHTML = title;
     const secondChild = document.createElement("h4");

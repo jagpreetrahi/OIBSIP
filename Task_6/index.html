@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Distressed&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-     <link rel="stylesheet" href="index.css">
-    
+    <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
     <h1>The To-Do List</h1>
@@ -23,6 +23,14 @@
            <label for="description" class="lb-todo">Enter the Description</label>
            <input type="text" placeholder="Your Description" class="inp-todo" id="description" required>
            <button id="btn" onclick="createdTodo()">Add Todo</button>
+           
+           <div id="remain">
+               
+                <button class="tasks-btn" onclick="completedtask()">Completed Tasks</button>
+                
+                <button class="tasks-btn" onclick="pendingTask()">Pending Tasks</button>
+                
+            </div>
         </div>
 
         <div id="created_todo">
@@ -35,6 +43,16 @@
             <div id="result-todo"></div>
         </div>
     </section>
+
+    <div id="completed-tasks" class="style_container">
+      
+    </div>
+      
+    <div id="pending-tasks" class="style_container">
+        
+    </div>
+
+   
 
     <script src="index.js"></script>
 </body>

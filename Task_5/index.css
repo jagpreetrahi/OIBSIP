@@ -39,18 +39,16 @@ body{
 
 #leader-container {
     display: flex;                
-    justify-content: space-between; 
-    align-items: center;          
-    width: 100%;                  
+    width:  100%;
     padding: 20px;                 
 }
 
 .leader-name {
     display: flex;
     flex-direction: column;        
-    justify-content: center;       
-    align-items: center;           
-    width: 200px;                  
+    justify-content : center;
+    align-items : center;
+    width: 400px;                  
     height: 250px;                 
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -59,6 +57,7 @@ body{
     text-align: center;            
     transition: all 0.3s ease;     
     margin: 0 10px;                
+    
 }
 
 .leader-name img {

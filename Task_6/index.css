@@ -20,10 +20,10 @@ h1{
 
 #new_todo{
     width: 350px;
-    height: 310px;
+    height: 350px;
     border: none;
     border-radius: 10px;
-    /* background-color: #F5F5F5; */
+    
     margin-left: 100px;
 }
 
@@ -175,6 +175,113 @@ h1{
 }
 
 #result-todo i.fas.fa-trash-alt:hover {
+    background-color: #ffb3b3;
+    color: #fff;
+}
+
+
+.tasks-btn{
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 35px;
+   
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: #E6E6D3;
+    border: none;
+    cursor: pointer;
+}
+
+.tasks-btn:hover{
+    color : white;
+    transform: scale(1.1);
+    background-color: blue;
+}
+
+#remain{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.style_container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.style_container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3e8ff; 
+    border-radius: 12px;
+    padding: 12px 16px;
+    border: 2px solid #845ec2; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    gap: 15px; 
+}
+
+
+.style_container div:hover {
+    background-color: #e1d5ff; 
+    transform: scale(1.0); 
+}
+
+
+.style_container input[type="checkbox"] {
+    transform: scale(1); 
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+
+.style_container h3 {
+    font-size: 20px;
+    color: #4b0082; 
+    font-weight: bold;
+    margin: 0;
+    min-width: 150px; 
+}
+
+
+.style_container h4 {
+    font-size: 18px;
+    color: #5a189a; 
+    margin: 0;
+    flex-grow: 1; 
+}
+
+
+.style_container i {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.style_container i.fas.fa-edit {
+    color: #4b0082;
+}
+
+.style_container i.fas.fa-edit:hover {
+    background-color: #d8b4fe;
+    color: #fff;
+}
+
+
+.style_container i.fas.fa-trash-alt {
+    color: #ff4d4d;
+}
+
+.style_container i.fas.fa-trash-alt:hover {
     background-color: #ffb3b3;
     color: #fff;
 }
